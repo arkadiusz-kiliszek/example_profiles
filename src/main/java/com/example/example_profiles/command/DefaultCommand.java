@@ -19,6 +19,7 @@ public class DefaultCommand implements CommandLineRunner {
     @Value("${example.command.extented}")
     private String extended;
 
+    //Dodatkowe mozliwosci @VALUE
     @Value("#{'${spring.profiles.active:unkown}'.split(',')}")
     private List<String> activeProfile;
 
