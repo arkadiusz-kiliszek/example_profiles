@@ -19,8 +19,8 @@ public class DefaultCommand implements CommandLineRunner {
     @Value("${example.command.extented}")
     private String extended;
 
-    @Value("${spring.profiles.active:}")
-    private String activeProfile;
+    @Value("#{'${spring.profiles.active:unkown}'.split(',')}")
+    private List<String> activeProfile;
 
     @Override
     public void run(String... args) throws Exception {
